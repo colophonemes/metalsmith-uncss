@@ -54,7 +54,7 @@ Metalsmith(__dirname)
 
 A string or array of CSS files to check against the input HTML files. Files will be concatenated by UnCSS in the order that they are supplied.
 
-**This is a required option **
+**This is a required option**
 
 UnCSS usually works by detecting CSS files linked in the header of the supplied HTML files. However, because at this stage of the process the CSS files only exist as part of Metalsmith's build pipeline, UnCSS won't be able to find them. To get around this, it's necessary to override the default behaviour and manually pass the file contents through to UnCSS as the `raw` option.
 
