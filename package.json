@@ -8,14 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/736a64/metalsmith-uncss"
+    "url": "https://github.com/colophonemes/metalsmith-uncss"
   },
   "keywords": [
     "metalsmith",
     "plugin",
     "uncss"
   ],
-  "author": "Sam Deere",
+  "bugs": {
+    "url": "https://github.com/colophonemes/metalsmith-uncss/issues"
+  },
+  "author": "Sam Deere <dev@colophonemes.org>",
   "license": "GPL",
   "dependencies": {
     "uncss": "^0.12.0",
