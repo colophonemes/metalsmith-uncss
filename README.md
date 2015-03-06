@@ -4,7 +4,7 @@ A [metalsmith](http://metalsmith.io) plugin based on Giacomo Martino's [uncss](h
 
 - [Installation](#installation)
 - [Usage](#usage)
--- [Options](#options)
+	- [Options](#options)
 
 
 ## <a name="installation"></a>Installation
@@ -47,14 +47,15 @@ Metalsmith(__dirname)
 
 
 ### <a name="options"></a>Options
-*css* <a name="options-css"></a> `String | Array` *required*
+**css** <a name="options-css"></a> `String | Array` *required*
 
 A string or array of CSS files to check against the input HTML files. Files will be concatenated by UnCSS in the order that they are supplied.
 
-*This is a required option* — UnCSS usually works by detecting CSS files linked in the header of the supplied HTML files. However, because at this stage of the process the CSS files only exist as part of Metalsmith's build pipeline, UnCSS won't be able to find them. To get around this, it's necessary to override the default behaviour and manually pass the file contents through to UnCSS as the `raw` option.
+*This is a required option*
+UnCSS usually works by detecting CSS files linked in the header of the supplied HTML files. However, because at this stage of the process the CSS files only exist as part of Metalsmith's build pipeline, UnCSS won't be able to find them. To get around this, it's necessary to override the default behaviour and manually pass the file contents through to UnCSS as the `raw` option.
 
 
-*html* `String | Array` *optional*
+**html** `String | Array` *optional*
 
 The HTML files that UnCSS will check CSS files against. If not specified, this defaults to every HTML file currently in the project build pipeline. These are passed to UnCSS as the `files` argument.
 
@@ -79,7 +80,7 @@ For example:
 .use(uncss({
 	css: ['bootstrap.css','app.css'],
 	output: 'uncss-output.css',
-	basePath: 'styles'
+	basepath: 'styles'
 }))
 
 ```
