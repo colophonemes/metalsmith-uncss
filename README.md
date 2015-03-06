@@ -39,7 +39,7 @@ Metalsmith(__dirname)
 		basepath: 'styles',					// optional base path where all your css files are stored
 		removeOriginal: true,				// remove original CSS files from the build
 		uncss: {							// uncss options - passed directly to UnCSS
-			ignore: ['.added-at-runtime','#do-not-remove]
+			ignore: ['.added-at-runtime','#do-not-remove']
 		}
 	}))
 	.build();
