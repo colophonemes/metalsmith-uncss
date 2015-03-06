@@ -47,23 +47,33 @@ Metalsmith(__dirname)
 
 
 ### <a name="options"></a>Options
-**css** <a name="options-css"></a> `String | Array` *required*
+
+#### css <a name="options-css"></a>
+
+`String | Array` *required*
 
 A string or array of CSS files to check against the input HTML files. Files will be concatenated by UnCSS in the order that they are supplied.
 
-*This is a required option*
+**This is a required option **
+
 UnCSS usually works by detecting CSS files linked in the header of the supplied HTML files. However, because at this stage of the process the CSS files only exist as part of Metalsmith's build pipeline, UnCSS won't be able to find them. To get around this, it's necessary to override the default behaviour and manually pass the file contents through to UnCSS as the `raw` option.
 
 
-**html** `String | Array` *optional*
+#### html
+
+`String | Array` *optional*
 
 The HTML files that UnCSS will check CSS files against. If not specified, this defaults to every HTML file currently in the project build pipeline. These are passed to UnCSS as the `files` argument.
 
-**output** (`String`) *required*
+#### output
+
+`String` *required*
 
 The name of the output file.
 
-**basepath** (`String`) *optional*
+#### basepath
+
+(`String`) *optional*
 
 Optional base path that will be prepended to all css files (i.e. those supplied by `css` and `output` options).
 
@@ -85,11 +95,15 @@ For example:
 
 ```
 
-**removeOriginal** `(Boolean)` *optional*
+#### removeOriginal
+
+`(Boolean)` *optional*
 
 Remove the original CSS files (i.e. those supplied by `css`) from the build pipeline. Defaults to `true`.
 
-**uncss** `(Object)` *optional*
+#### uncss
+
+`(Object)` *optional*
 
 Object of options to pass to UnCSS as the `options` argument. Supports all options except for `raw`, which `metalsmith-uncss` uses to feed in css files from its `css` option ([see above](#options-css)).
 
