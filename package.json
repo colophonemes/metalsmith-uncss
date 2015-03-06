@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-uncss",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Run uncss from metalsmith",
   "main": "lib/index.js",
   "scripts": {
